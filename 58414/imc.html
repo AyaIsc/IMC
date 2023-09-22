@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta author="Aya">
+    <meta keywords="site">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet webg page imc</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="jquery.min.js"></script>
+    <script src="imc.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenue sur le Site !</h1>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="conseils.html">Nos conseils</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#IMC" type="button"
+                    role="tab" aria-controls="IMC" aria-selected="true">Qu'est-ce que l'IMC</button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#calcul" type="button"
+                    role="tab" aria-controls="calcul" aria-selected="false">comment calculer l'IMC</button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#calculatrice"
+                    type="button" role="tab" aria-controls="calculatrice" aria-selected="false">calculatrice</button>
+            </li>
+
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="IMC" role="tabpanel" aria-labelledby="IMC-tab">
+                <h2> Qu'est-ce que l'IMC ?</h2>
+                <hr>
+                <p>
+                    IMC sont les initiales de "Indice de Masse Corporelle"
+                    (body mass / BMI en anglais). Inventé par un mathématicien,
+                    Adolphe Quetelet, l'IMC se calcule en fontion de la taille et
+                    de la masse corporelle d'une personne.
+                    L'IMC est une indication sur la santé physique et évalue les
+                    risques liés au surpoids chez l'adulte.
+                    Les intervalles entre plusieurs valeures inquident à chacun sa condition physique.
+                </p>
+                <p> Les intervalles d l'IMC sont les suivants :</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> IMC </th>
+                            <th> Description </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>- de 16,5 </td>
+                            <td> dénutrition</td>
+                        </tr>
+                        <tr>
+                            <td>16,5 à 18,5</td>
+                            <td>maigreur</td>
+                        </tr>
+                        <tr>
+                            <td>18,5 à 25</td>
+                            <td>poids normal</td>
+                        </tr>
+                        <tr>
+                            <td>25 à 30</td>
+                            <td>surpoids</td>
+                        </tr>
+                        <tr>
+                            <td>30 à 35</td>
+                            <td>obésité modérée</td>
+                        </tr>
+                        <tr>
+                            <td>35 à 40</td>
+                            <td>obésité sévère</td>
+                        </tr>
+                        <tr>
+                            <td>40 et plus</td>
+                            <td>obésité morbide ou massive</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="tab-pane fade" id="calcul" role="tabpanel" aria-labelledby="calcul-tab">
+                <h2>Comment Calculter L'IMC</h2>
+                <hr>
+                <p id="calculer">Il suffit de connaître le poids (en kilogrammes)
+                    et la taille de la personne (en mètres).
+                </p>
+                <p id="calculer">P = Poids & T = Taille</p>
+                <p id="calculer"> calcul : P/T²</p>
+            </div>
+
+            <div class="tab-pane fade" id="calculatrice" role="tabpanel" aria-labelledby="calculatrice-tab">
+                <h2>Que vaut mon IMC</h2>
+                <hr>
+                <form id="bmiform">
+                    <p>
+                        <label for="poids">Poids</label>
+                        <input type="number" name="poids" id="poids"></input>
+                    </p>
+                    <p>
+                        <label for="taille">Taille (en mètre):</label>
+                        <input type="number" name="taille" id="taille"></input>
+                    </p>
+                    <button type="button" class="btn btn-primary" id="montrer" name="taille">Caculer IMC</button>
+                    <p></p>
+                    <p>
+                        Avec votre taille (<span class="resultat-taille"></span> m) et
+                        votre poids (<span class="resultat-poids"></span> kgs),
+                        votre imc est de : <span class="resultat-imc"></span> <span class="resultat-sante"></span>
+                    </p>
+                    <p></p>
+                    <button type="button" id="enregistrer">Enregistrer vos résultats</button>
+
+                    <p class="result hidden">
+                        Le : <span class="days"></span>/<span class="month"></span>,
+                        Votre resultat était de : <span class="imc-precedent"></span> ,
+                        vous êtes maintenant à : <span class="resultat-imc"></span>,
+                        en les comparants il ya une difference de : <span class="compare"></span> points.
+                    </p>
+                </form>
+
+                <h3>Votre Tableau selon vos résultats : </h3>
+
+                <div class="tabNutrition hidden">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> Poids </th>
+                                <th> Description </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="denutrition">
+                                <td> - de <span id="denutp"></span>kgs </td>
+                                <td> dénutrition</td>
+                            </tr>
+                            <tr id="maigreur">
+                                <td><span id="maigreurA"></span>kgs à <span id="maigreurB"></span>kgs </td>
+                                <td> maigreur</td>
+                            </tr>
+                            <tr id="normal">
+                                <td><span id="normalA"></span>kgs à <span id="normalB"></span>kgs </td>
+                                <td> poids normal</td>
+                            </tr>
+                            <tr>
+                                <td><span id="surpoidsA"></span>kgs à <span id="surpoidsB"></span>kgs </td>
+                                <td> surpoids</td>
+                            </tr>
+                            <tr>
+                                <td><span id="obeseA"></span>kgs à <span id="obeseB"></span>kgs </td>
+                                <td> obésité modérée</td>
+                            </tr>
+                            <tr>
+                                <td><span id="severeA"></span>kgs à <span id="severeB"></span>kgs </td>
+                                <td> obésité sévère</td>
+                            </tr>
+                            <tr>
+                                <td>+ de <span id="morbide"></span>kgs </td>
+                                <td> obésité morbide ou massive</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <b>Coin infos</b>
+        </p>
+        <ul>
+            <li>matricule : 58414</li>
+            <li>nom & prénom : Kaoun Aya</li>
+            <li>Groupe : B122</li>
+            <li>sigle de professeur de laboratoire : DBO</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

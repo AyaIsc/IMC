@@ -1,0 +1,211 @@
+@font-face {
+    font-family: 'yahoo';
+    src: url(fonts/Yahoo.ttf);
+}
+
+@font-face {
+    font-family: 'Candy';
+    src: url(fonts/CandyJelly.otf);
+}
+
+@font-face {
+    font-family: 'beans';
+    src: url(fonts/Candy\ Beans.otf);
+}
+
+@font-face {
+    font-family: 'toxica';
+    src: url(fonts/TOXICA__.TTF);
+}
+
+body {
+    display: grid;
+    
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: '. banner .'
+        '. main .'
+        '. footer .';
+    /*background-color: white;*/
+    /*background-image: url(photos/background.jpg);*/
+    background-size: cover;
+    max-width: 768px;
+    margin: auto;
+    text-decoration: none;
+    
+}
+
+header {grid-area: banner;}
+nav{ grid-area: nav; }
+main { grid-area: main;}
+footer { grid-area: footer;}
+
+h1 {
+    text-align: center;
+    text-shadow: rgb(32, 30, 71) 2px 2px;
+    font-family: toxica;
+    color : rgb(95, 119, 143);
+    /*background-image: url(photos/runing.jpg);*/
+    background-size: cover;
+    background-position-y: 270px;
+    border: 23px;
+    border-radius: 23px;
+    border-color: #aabeeb;
+    padding: 30px;
+}
+
+.menu {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    list-style-type: none; /*enlève les pts listes*/
+    /*font-family: toxica;*/
+}
+
+.menu li a {
+    display: inline-flex;
+    /*border: solid rgb(126, 179, 223);*/
+    /*background-color: rgba(233, 238, 243, 0.945);*/
+    border-radius: 1px;
+    color: rgb(135, 163, 206);
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu li a:hover, /*effets clicks*/
+a:focus-visible {
+    border: solid rgb(158, 162, 197); /*effet lors de passage souris sur menu*/
+    border-radius: 2px;
+}
+
+a:active {
+    background-color: rgb(165, 161, 221); /*effet lors de click*/
+    color: rgb(128, 136, 211); /*effet lors de click sur texte*/
+}
+
+p#intro {
+    
+    font-size: 19px;
+    text-align: center;
+    /*font-family: toxica;*/
+    color: rgb(41, 44, 48);
+    /*border: 1px solid rgb(169, 168, 212);*/
+    /*background-color: rgb(255, 255, 255);*/
+    /*border-radius: 10px;*/
+}
+
+p#visite {
+    
+    font-size: 25px;
+    color: rgb(65, 60, 60);
+    text-shadow: 1px 1px rgb(109, 109, 124);
+}
+
+p {
+    /*font-family: toxica;*/
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    flex-wrap: wrap;/*passe à la ligne si pas assez de place*/
+    /*font-family: toxica;*/
+    color: white;
+    text-shadow: rgb(105, 119, 148) 2px 2px;
+}
+
+.pic img {
+    display: flex;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+    justify-content: center;
+    transition: transform .2s;
+    border-radius: 25px;
+    /*background-color: #aabeeb;*/
+}
+.pic img:hover {
+    transform: scale(1.5);
+}
+
+main table {
+    /*background-color: rgb(172, 198, 241);*/
+    /*font-family: toxica;*/
+    font-size: 18px;
+    color: rgb(131, 170, 192);
+    margin: auto;
+    padding: 5px;
+    border-collapse: separate;
+    border-spacing:10px;
+   
+
+    text-shadow: rgb(176, 185, 204) 1px 1px;
+   
+}
+main table td{
+    padding:2px;
+}
+
+th {   
+    border-bottom: 2px solid rgb(141, 163, 175);
+}
+
+input {
+    border-radius: 10px;
+}
+
+h2 {
+    /*font-family: yahoo;*/
+    color: rgb(57, 61, 61);
+    text-shadow: #9498a1 2px 2px;
+}
+
+h3 {
+    /*font-family: yahoo;*/
+    color: rgb(57, 61, 61);
+    text-shadow: #9498a1 2px 2px;
+}
+
+h4 {
+    /*font-family: yahoo;*/
+    color: rgb(57, 61, 61);
+    text-shadow: #9498a1 2px 2px;
+}
+
+form {
+    /*font-family: toxica;*/
+}
+
+.emphasized {
+    background-color: rgb(137, 183, 243);
+}
+
+ul {
+    /*font-family: toxica*/
+}
+
+footer {
+    /*font-family: toxica;*/
+    border: 1px solid rgb(169, 168, 212);
+    text-shadow: rgb(105, 119, 148) 2px 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.conseils {
+    font-family: beans;
+    color: rgb(57, 61, 61);
+    text-shadow: #9498a1 2px 2px;
+    font-size: 20px;
+}
+
+
+.hidden {
+    display: none;
+}
