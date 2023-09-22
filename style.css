@@ -99,7 +99,7 @@ p#visite {
     
     font-size: 25px;
     color: rgb(65, 60, 60);
-    text-shadow: 1px 1px rgb(109, 109, 124);
+    font-weight: bold;
 }
 
 p {
@@ -113,7 +113,6 @@ p {
     flex-wrap: wrap;/*passe à la ligne si pas assez de place*/
     /*font-family: toxica;*/
     color: white;
-    text-shadow: rgb(105, 119, 148) 2px 2px;
 }
 
 .pic img {
@@ -140,9 +139,7 @@ main table {
     padding: 5px;
     border-collapse: separate;
     border-spacing:10px;
-   
-
-    text-shadow: rgb(176, 185, 204) 1px 1px;
+    font-weight: bold;
    
 }
 main table td{
@@ -160,19 +157,19 @@ input {
 h2 {
     /*font-family: yahoo;*/
     color: rgb(57, 61, 61);
-    text-shadow: #9498a1 2px 2px;
+    font-weight: bold;
 }
 
 h3 {
     /*font-family: yahoo;*/
     color: rgb(57, 61, 61);
-    text-shadow: #9498a1 2px 2px;
+    font-weight: bold;
 }
 
 h4 {
     /*font-family: yahoo;*/
     color: rgb(57, 61, 61);
-    text-shadow: #9498a1 2px 2px;
+    font-weight: bold;
 }
 
 form {
@@ -190,18 +187,18 @@ ul {
 footer {
     /*font-family: toxica;*/
     border: 1px solid rgb(169, 168, 212);
-    text-shadow: rgb(105, 119, 148) 2px 2px;
+    font-weight: bold;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
     font-size: 20px;
-    color: white;
+    color: rgb(126, 115, 115);
 }
 
 .conseils {
     font-family: beans;
     color: rgb(57, 61, 61);
-    text-shadow: #9498a1 2px 2px;
+    font-weight: bold;
     font-size: 20px;
 }
 
